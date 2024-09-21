@@ -1,5 +1,15 @@
+name: getDateTime
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
-#!/bin/bash
-
-current_date_time=$(date)
-echo "Current date and time: $current_date_time"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print date
+        run: |
+          current_date_time=$(date)
+          echo "Current date and time: $current_date_time"
