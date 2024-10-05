@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.animals.*;
+import org.example.types.*;
 
 public class Main {
   public static void main(String[] args) {
