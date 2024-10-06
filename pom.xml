@@ -6,7 +6,6 @@
   <artifactId>student-project</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>student-project</name>
   <name>student-project2</name>
   <url>http://maven.apache.org</url>
   <properties>
