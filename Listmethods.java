@@ -1,4 +1,4 @@
-//package org.example.CustomArrayList;
+package org.example.CustomArrayList;
 
 /**
  * @param <E> тип элементов в создаваемом списке

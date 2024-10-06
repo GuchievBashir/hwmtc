@@ -1,6 +1,6 @@
-//package org.example.CustomArrayList;
+package org.example.CustomArrayList;
 
-//import org.example.CustomArrayList.Listmethods;
+import org.example.CustomArrayList.Listmethods;
 
 /**
  * @param <E> тип элементов в создаваемом списке
@@ -50,6 +50,9 @@ public class CustomArrayList<E> implements Listmethods<E> {
    */
   @Override
   public void add(E value) {
+    if (value = null) {
+      throw new NullPointerException("Cannot add a null element");
+    }
     if (this.size == this.capacity) {
        this.Realloc();
     }
@@ -64,6 +67,9 @@ public class CustomArrayList<E> implements Listmethods<E> {
    */
   @Override
   public E remove(int index) {
+    if (index = null) {
+      throw new NullPointerException("Cannot remove a null element");
+    }
     if (index < 0 || index >= this.size) {
       throw new IndexOutOfBoundsException("Index: " + index + "out of bounds for length" + this.size);
     }
@@ -85,6 +91,9 @@ public class CustomArrayList<E> implements Listmethods<E> {
    */
   @Override
   public E get(int index) {
+    if (index = null) {
+      throw new NullPointerException("Cannot get a null element");
+    }
     if (index < 0 || index >= this.size) {
       throw new IndexOutOfBoundsException("Index: " + index + "out of bounds for length" + this.size);
     }
