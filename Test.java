@@ -1,4 +1,7 @@
-import java.CustomArrayList;
+package org.exmaple;
+
+import org.example.CustomArrayList;
+
 public class Test {
   public static void main(String[] args) {
     CustomArrayList<Integer> list = new CustomArrayList()
@@ -6,5 +9,6 @@ public class Test {
       list.add(i)
     }
     print(list.get(11))
+    list.remove(2)
   }
 }
