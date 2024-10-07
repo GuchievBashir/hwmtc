@@ -5,7 +5,7 @@ import org.example.CustomArrayList.Listmethods;
 /**
  * @param <E> тип элементов в создаваемом списке
  */
-public class CustomArrayList<E> implements Listmethods<E> {
+public class CustomArrayList<E> extends Listmethods<E> {
   private int size;
   private int capacity;
   private Object[] elements;
