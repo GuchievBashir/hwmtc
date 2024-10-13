@@ -10,8 +10,8 @@ import java.util.Random;
 import static org.junit.jupiter.api.Assertions.*;
 
 class InsertionSortTest {
-  Random rnd = new Random();
 
+  @Test
   public void sort() {
     final InsertionSort strategy = new InsertonSort();
     final List<Integer> list = new ArrayList<>();
@@ -23,4 +23,9 @@ class InsertionSortTest {
     assertEquals(List.of(-4, -2, 1, 3, 5), strategy.sort(list));
   }
 
+  @Test
+  void sortingtype() {
+    SortedTypes answer = new InsertionSort().type();
+    assertEquals(answer, SortedTypes.InsertionSort);
+  }
 }

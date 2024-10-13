@@ -9,17 +9,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BubbleSortTest {
   @Test
-  void sort() throws Exception {
+  void sort() {
     List<Integer> listToSort = Arrays.asList(9,8,7,6,5,4,3,2,1);
     List<Integer> answerlist = Arrays.asList(1,2,3,4,5,6,7,8,9);
-    BubbleSort sorter = new BubbleSort(32);
+    BubbleSort sorter = new BubbleSort();
     List<Integer> sortedList = sorter.sort(listToSort);
     assertEquals(sortedList, answerlist);
   }
 
   @Test
   void sortingtype() {
-    SorterType answer = new BubbleSort(100).type();
+    SortedTypes answer = new BubbleSort().type();
     assertEquals(answer, SortedTypes.BubbleSort);
   }
 }
