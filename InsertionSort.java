@@ -8,8 +8,9 @@ public class InsertionSort {
   @Override
   public List<Integer> sort(List<Integer> list) {
     ListWrap<Integer> wrapper = new ListWrap<>(list);
-    Collections.sort(wrapper);
-    return wrapper.cloneList();
+    List<Integer> newList = wrapper.cloneList();
+    Collections.sort(newList);
+    return newList;
   }
 
   @Override
