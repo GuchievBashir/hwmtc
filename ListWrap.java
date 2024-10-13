@@ -6,7 +6,7 @@ import java.util.List;
 public class ListWrap {
   private final List<T> newlist;
 
-  public ListWrapper(List<T> list) {
+  public ListWrap(List<T> list) {
     this.newlist = new ArrayList<T>(list);
   }
 
@@ -14,7 +14,4 @@ public class ListWrap {
     return new ArrayList<T>(newlist);
   }
 
-  public int lenght() {
-    return newlist.size();
-  }
 }

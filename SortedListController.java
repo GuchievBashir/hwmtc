@@ -1,25 +1,32 @@
-package sortings;
+package sorting;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
-public class SortedListController {
-  List<Sorter> listsort;
+public class SortingManager {
 
-  public SortedListController(List<Sorter> listOfSorters) {
-    this.listsort = listsort;
+  private final List<SortingInterface> sorts = new ArrayList<>();
+
+  public void addSortingStrategy(SortingInterface sort) {
+    this.sorts.add(sort);
   }
 
-  public List<Integer> sort(List<Integer> list, SorterType type) throws Exception {
-    boolean fountSorter = false;
-    for (var sorter: listOfSorters) {
-      if (sorter.type().equals(type)) {
-        fountSorter = true;
-        return sorter.sort(list);
+  public List<Integer> sort(List<Integer> list, SortedTypes type) {
+    RuntimeException SortingTypeException = null;
+    for (SortingInterface strategy : this.sorts) {
+      if (type != SortedTypes.ANY && strategy.type() != type) {
+        continue;
+      }
+      try {
+        return strategy.sort(List.copyOf(list));
+      } catch (RuntimeException exception) {
+        SortingTypeException = exception;
       }
     }
-    if (!fountSorter) {
-      throw new Exception("Такая сортировка не поддерживается");
+    if (SortedTypesException != null) {
+      throw SortedTypesException;
     }
-    return list;
+    throw new NoSuchElementException("Такой вид сортировки не поддерживается");
   }
 }

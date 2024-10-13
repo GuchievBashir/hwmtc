@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,33 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class InsertionSortTest {
   Random rnd = new Random();
 
-  @Test
-  void wrap() {
-    InsertionSort sorter = new InsertionSort(17);
-    List<Integer> list = Arrays.asList(3, 9, 1, 7, -2);
-    sorter.wrap(list);
-    assertEquals(list, sorter.wrapper.cloneList());
+  public void sort() {
+    final InsertionSort strategy = new InsertonSort();
+    final List<Integer> list = new ArrayList<>();
+    list.add(1);
+    list.add(-2);
+    list.add(3);
+    list.add(-4);
+    list.add(5);
+    assertEquals(List.of(-4, -2, 1, 3, 5), strategy.sort(list));
   }
 
-  @Test
-  void setElementsCountLimit() {
-    InsertionSort sorter = new InsertionSort(17);
-    int n = rnd.nextInt(1024);
-    sorter.setElementsCountLimit(n);
-    assertEquals(n, sorter.elementsCountLimit);
-  }
-
-  @Test
-  void getElementsCountLimit() {
-    int n = rnd.nextInt(1024);
-    InsertionSort sorter = new InsertionSort(n);
-    assertEquals(n, sorter.getElementsCountLimit());
-  }
-
-
-  @Test
-  void sortingtype() {
-    SorterType answer = new InsertionSort(100).type();
-    assertEquals(answer, SortedTypes.InsertionSort);
-  }
 }
