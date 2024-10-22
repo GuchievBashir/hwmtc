@@ -14,7 +14,7 @@ public class InsertionSort {
   }
 
   public SortedTypes type() {
-    return SortedTypes.Insertionsort;
+    return SortedTypes.INSERTION;
   }
 
 }

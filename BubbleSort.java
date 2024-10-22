@@ -20,6 +20,6 @@ public class BubbleSort {
   }
 
   public SortedTypes type() {
-    return SortedTypes.Bubblesort;
+    return SortedTypes.BUBBLE;
   }
 }

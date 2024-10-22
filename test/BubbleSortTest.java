@@ -20,6 +20,6 @@ class BubbleSortTest {
   @Test
   void sortingtype() {
     SortedTypes answer = new BubbleSort().type();
-    assertEquals(answer, SortedTypes.BubbleSort);
+    assertEquals(answer, SortedTypes.BUBBLE);
   }
 }

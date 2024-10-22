@@ -26,6 +26,6 @@ class InsertionSortTest {
   @Test
   void sortingtype() {
     SortedTypes answer = new InsertionSort().type();
-    assertEquals(answer, SortedTypes.InsertionSort);
+    assertEquals(answer, SortedTypes.INSERTION);
   }
 }
