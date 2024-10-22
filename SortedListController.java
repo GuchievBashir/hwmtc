@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class SortingManager {
+public class SortedListController {
 
   private final List<SortingInterface> sorts = new ArrayList<>();
 
