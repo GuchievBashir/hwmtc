@@ -1,4 +1,4 @@
-package org.example.animals;
+package animals;
 
 public interface Animal {
     void eat(String food);

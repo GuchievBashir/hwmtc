@@ -1,8 +1,8 @@
-package org.example.types;
+package types;
 
 public enum TypeAnimal {
     Herbivorous, Predator;
-    static String getName(TypeAnimal animal) {
+    public static String getName(TypeAnimal animal) {
         return animal.toString();
     }
 }

@@ -1,7 +1,7 @@
-package org.example.animals;
+package animals;
 
-import org.example.types.TypeAnimal;
-import org.example.types.TypeMove;
+import types.TypeAnimal;
+import types.TypeMove;
 
 public class Zoopark {
     protected String animal;

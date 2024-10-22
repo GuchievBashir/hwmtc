@@ -1,8 +1,8 @@
-package org.example.types;
+package types;
 
 public enum TypeMove {
     swim, fly, walk;
-    static String getName(TypeMove move) {
+    public static String getName(TypeMove move) {
         return move.toString();
     }
 }
