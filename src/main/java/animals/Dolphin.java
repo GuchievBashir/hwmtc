@@ -1,16 +1,16 @@
 package animals;
 
-import types.TypeAnimal;
-import types.TypeMove;
+import types.*;
 
-public class Dolphin extends Zoopark implements Animal{
+public class Dolphin extends Animal implements AnimalActions{
     public Dolphin(String animal, TypeMove typemove, TypeAnimal animalT) {
         super(animal, typemove, animalT);
     }
     @Override
-    public void eat(String food) {
-        if (food.equals("Fish")) {
+    public void eat(TypeFood food) {
+        if (food.equals(TypeFood.FISH)) {
             System.out.println(animal + " eat");
+            typeFood = food;
         } else {
             System.out.println(animal + " not eat");
         }

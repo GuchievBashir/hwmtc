@@ -1,7 +1,7 @@
 package types;
 
 public enum TypeMove {
-    swim, fly, walk;
+    SWIM, FLY, WALK;
     public static String getName(TypeMove move) {
         return move.toString();
     }

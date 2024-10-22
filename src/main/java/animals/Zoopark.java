@@ -1,15 +1,9 @@
 package animals;
 
-import types.TypeAnimal;
-import types.TypeMove;
+import types.TypeFood;
 
-public class Zoopark {
-    protected String animal;
-    protected String Typemove;
-    protected String Typeanimal;
-    public Zoopark(String animal, TypeMove typemove, TypeAnimal animalT) {
-        this.animal = animal;
-        this.Typeanimal = TypeAnimal.getName(animalT);
-        this.Typemove = TypeMove.getName(typemove);
+public class Zoopark<T extends Animal>{
+    public void present(T t) {
+      System.out.print("Здесь обитает животное " + t.Typeanimal + " " +  t.getClass().getSimpleName() + " по имени " + t.animal + ". Тип питания для вида такого животного - " + t.typeFood + ". Тип передвижения - " + t.Typemove);
     }
 }
