@@ -1,4 +1,4 @@
-package sortings;
+package org.sortings;
 
 
 import java.util.Collections;

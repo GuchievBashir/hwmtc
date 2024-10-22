@@ -1,4 +1,4 @@
-package sorting;
+package org.sortings;
 
 import java.util.List;
 
