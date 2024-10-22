@@ -1,4 +1,4 @@
-package org.sortings;
+package sorting;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +24,8 @@ public class SortedListController {
         SortingTypeException = exception;
       }
     }
-    if (SortedTypesException != null) {
-      throw SortedTypesException;
+    if (SortingTypeException != null) {
+      throw SortingTypeException;
     }
     throw new NoSuchElementException("Такой вид сортировки не поддерживается");
   }

@@ -1,8 +1,8 @@
-package org.sortings;
+package sorting;
 
 import java.util.List;
 
-public interface SortingStrategy {
+public interface SortingInterface {
   List<Integer> sort(List<Integer> array);
 
   SortedTypes type();

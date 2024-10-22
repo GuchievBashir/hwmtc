@@ -1,19 +1,15 @@
-package test.sortings;
-
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
-
-import java.util.Random;
-
 import static org.junit.jupiter.api.Assertions.*;
+import sorting.*;
 
 class InsertionSortTest {
 
   @Test
   public void sort() {
-    final InsertionSort strategy = new InsertonSort();
+    final InsertionSort strategy = new InsertionSort();
     final List<Integer> list = new ArrayList<>();
     list.add(1);
     list.add(-2);

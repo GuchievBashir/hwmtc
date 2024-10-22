@@ -1,9 +1,9 @@
-package org.wrap;
+package wrapper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListWrap {
+public class ListWrap<T> {
   private final List<T> newlist;
 
   public ListWrap(List<T> list) {

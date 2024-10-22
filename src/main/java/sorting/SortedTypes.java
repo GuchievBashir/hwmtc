@@ -1,6 +1,7 @@
-package org.sortings;
+package sorting;
 
 public enum SortedTypes {
   BUBBLE,
-  INSERTION
+  INSERTION,
+  ANY
 }
