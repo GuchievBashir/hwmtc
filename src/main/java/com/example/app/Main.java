@@ -1,8 +1,9 @@
 package com.example.app;
 
 import com.example.app.controller.ArticleController;
-import com.example.app.controller.ArticleFreemarkerController;
 import com.example.app.controller.CommentController;
+import com.example.app.controller.ArticleFreemarkerController;
+import com.example.app.controller.Controller;
 import com.example.app.repository.InMemoryArticleRepository;
 import com.example.app.repository.InMemoryCommentRepository;
 import com.example.app.service.ArticleService;
@@ -10,6 +11,7 @@ import com.example.app.service.CommentService;
 import com.example.app.template.TemplateFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import spark.Service;
+import spark.template.freemarker.FreeMarkerEngine;
 
 import java.util.List;
 
@@ -22,25 +24,20 @@ public class Main {
     ArticleService articleService = new ArticleService(new InMemoryArticleRepository());
     CommentService commentService = new CommentService(new InMemoryCommentRepository());
 
+    FreeMarkerEngine freeMarkerEngine = TemplateFactory.freeMarkerEngine();
+
+    ArticleController articleController = new ArticleController(service, articleService, objectMapper);
+    CommentController commentController = new CommentController(service, commentService, objectMapper);
+    ArticleFreemarkerController articleFreemarkerController = new ArticleFreemarkerController(service, articleService, freeMarkerEngine);
+
     Application application = new Application(
             List.of(
-                    new ArticleFreemarkerController(
-                            service,
-                            articleService,
-                            TemplateFactory.freeMarkerEngine()
-                    ),
-                    new ArticleController(
-                            service,
-                            articleService,
-                            objectMapper
-                    ),
-                    new CommentController(
-                            service,
-                            commentService,
-                            objectMapper
-                    )
+                    articleController,
+                    commentController,
+                    articleFreemarkerController
             )
     );
+
     application.start();
 
     service.awaitInitialization();
