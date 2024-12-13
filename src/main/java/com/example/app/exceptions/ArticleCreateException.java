@@ -1,0 +1,10 @@
+package com.example.app.exceptions;
+
+public class ArticleCreateException extends RuntimeException {
+  public ArticleCreateException(String message) {
+    super(message);
+  }
+  public ArticleCreateException(String message, Throwable cause) {
+    super(message, cause);
+  }
+}
